@@ -26,6 +26,7 @@ requirements:
     - six >=1.10
     - sphinxtesters >=0.2
     - texext
+    - nbconvert
 
 test:
   imports:
