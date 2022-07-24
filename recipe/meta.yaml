@@ -15,10 +15,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python>=3.7
     - pip
   run:
-    - python
+    - python>=3.7
     - ipython[notebook] >=4.0
     - sphinx >=1.4
     - numpy >=1.7.1
