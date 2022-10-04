@@ -1,7 +1,8 @@
+{% set name = "nb2plots" %}
 {% set version = "0.6.1" %}
 
 package:
-  name: "nb2plots"
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
