@@ -6,7 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/matthew-brett/nb2plots/archive/refs/tags/{{ version }}.tar.gz
+  # As of 0.6.1, upstream puts only wheels on Pypi, hence we take the source directly from github.
+  url: https://github.com/matthew-brett/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: 1d255c39b8b1d30d0598cf06e3753dd3f77912c2fd0e97ead10ed516732e9f69
 
 build:
