@@ -1,31 +1,32 @@
 {% set name = "nb2plots" %}
-{% set version = "0.6" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ed3e62fad6701c0d3f4575b8a7037e69584e2d6e6cff47f786dd7a8c73fc9a6a
+  # As of 0.6.1, upstream puts only wheels on Pypi, hence we take the source directly from github.
+  url: https://github.com/matthew-brett/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 1d255c39b8b1d30d0598cf06e3753dd3f77912c2fd0e97ead10ed516732e9f69
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
-    - ipython[notebook] >=3.0
+    - python >=3.7
+    - ipython[notebook] >=4.0
     - sphinx >=1.4
-    - numpy >=1.6.1
-    - matplotlib-base >=1.1.0
-    - six >=1.7.0
-    - sphinxtesters
+    - numpy >=1.7.1
+    - matplotlib-base >=2.0
+    - six >=1.10
+    - sphinxtesters >=0.2
     - texext
     - nbconvert
 
@@ -53,3 +54,4 @@ about:
 extra:
   recipe-maintainers:
     - CurtLH
+    - theXYZT
