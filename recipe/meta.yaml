@@ -12,15 +12,15 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - ipython[notebook] >=4.0
     - sphinx >=1.4
     - numpy >=1.7.1
@@ -31,6 +31,8 @@ requirements:
     - nbconvert
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - nb2plots
     - nb2plots.testing
