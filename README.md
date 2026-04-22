@@ -1,11 +1,11 @@
-About nb2plots
-==============
+About nb2plots-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nb2plots-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/matthew-brett/nb2plots
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nb2plots-feedstock/blob/main/LICENSE.txt)
 
 Summary: Converting between ipython notebooks and sphinx docs
 
@@ -154,4 +154,5 @@ Feedstock Maintainers
 =====================
 
 * [@CurtLH](https://github.com/CurtLH/)
+* [@theXYZT](https://github.com/theXYZT/)
 

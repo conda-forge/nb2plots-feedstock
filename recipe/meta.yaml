@@ -1,5 +1,5 @@
 {% set name = "nb2plots" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 source:
   # As of 0.6.1, upstream puts only wheels on Pypi, hence we take the source directly from github.
   url: https://github.com/matthew-brett/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 1d255c39b8b1d30d0598cf06e3753dd3f77912c2fd0e97ead10ed516732e9f69
+  sha256: f3ebeae9564552a38ed51acfa58bd5100c4f51d9c7edef218dee9fe344501f09
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
